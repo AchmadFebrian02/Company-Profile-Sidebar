@@ -117,14 +117,14 @@
   <div class="footer-container">
     <div class="footer-contact">
       <h3>Contact Us</h3>
-      <p>Email: info@yourwebsite.com</p>
-      <p>Phone: +1 234 567 890</p>
-      <p>Address: 123 Your Street, Your City, Your Country</p>
+      <p>Email: faris@www.com</p>
+      <p>Phone: +62 8555 ****</p>
+      <p>Address: 123 Jlan proklamasi, Jakarta,  Indonesia</p>
     </div>
   </div>
 
   <div class="footer-bottom">
-    <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+    <p>&copy; 2024 MotorX Club. All rights reserved.</p>
   </div>
 </footer>
 

@@ -297,12 +297,23 @@ button:hover {
 }
 
 /* Product Card Styles */
+.product-cards-section {
+  padding: 50px 100px;
+  background-color: #f8f8f8;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 .product-cards {
-  display: flex;
-  flex-wrap: wrap; /* Membungkus kartu jika layar terlalu kecil */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tiga kolom grid */
   gap: 20px; /* Jarak antar kartu */
-  justify-content: center; /* Menyelaraskan kartu di tengah */
-  padding: 20px;
+  justify-items: center; /* Menyelaraskan kartu di tengah */
 }
 
 .product-card {
@@ -310,18 +321,19 @@ button:hover {
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 250px;
+  width: 100%;
+  max-width: 300px; /* Membatasi lebar maksimal kartu */
   overflow: hidden;
   display: flex;
-  flex-direction: column; /* Kolom untuk mengatur gambar dan konten */
-  align-items: center; /* Menengahkan konten dalam kartu */
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efek transisi */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product-card:hover {
-  transform: translateY(-5px); /* Efek mengangkat saat di-hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Efek bayangan saat di-hover */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 .product-image {
@@ -551,6 +563,12 @@ button:hover {
   .client-grid {
     grid-template-columns: 1fr; /* 1-column grid on very small screens */
   }
+  .product-cards {
+    grid-template-columns: 1fr; /* Satu kolom untuk layar kecil */
+  }
+  .gallery-grid {
+    grid-template-columns: 1fr; /* 1 kolom untuk ponsel */
+  }
 }
 
 
@@ -589,8 +607,8 @@ button:hover {
   .section-description, .advantages-list {
     font-size: 0.9rem;
   }
-  .product-card {
-    width: 100%;
+  .product-cards {
+    grid-template-columns: repeat(1, 1fr); 
   }
   .artikel-item {
     gap: 30px;
@@ -613,5 +631,13 @@ button:hover {
   }
   .client-grid {
     grid-template-columns: repeat(2, 1fr); /* 2-column grid on smaller screens */
+  }
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom untuk layar kecil */
+  }
+}
+@media (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* 3 kolom untuk tablet */
   }
 }
